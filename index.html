@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minimal Arduino Web Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Minimal Arduino LED Simulator</h1>
+
+<div class="container">
+
+  <div class="palette">
+    <h3>Components</h3>
+    <button onclick="addArduino()">Arduino Uno</button>
+    <button onclick="addLED()">LED</button>
+    <button onclick="addButton()">Push Button</button>
+  </div>
+
+  <div class="canvas">
+    <h3>Workspace</h3>
+    <div id="workspace"></div>
+
+    <div class="pin-config">
+      LED Pin:
+      <select id="ledPin"></select>
+
+      Button Pin:
+      <select id="buttonPin"></select>
+    </div>
+
+    <div class="toolbar">
+      <button onclick="startSimulation()">START</button>
+      <button onclick="stopSimulation()">STOP</button>
+      <button onclick="toggleCode()">CODE VIEW</button>
+    </div>
+
+    <pre id="code" class="hidden"></pre>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
